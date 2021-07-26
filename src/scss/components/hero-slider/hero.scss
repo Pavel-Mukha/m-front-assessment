@@ -1,0 +1,28 @@
+.hero-slider {
+  display: flex;
+  min-height: 400px;
+  margin-bottom: 60px;
+  background: url("images/hero-image-1-min.jpg") no-repeat center;
+  background-size: cover;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    max-width: 490px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: 600;
+    color: $brand-color;
+  }
+  &__description {
+    font-size: 18px;
+    line-height: 22px;
+    color: $brand-color;
+  }
+}
