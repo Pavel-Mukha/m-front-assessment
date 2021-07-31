@@ -1,6 +1,8 @@
 .agents {
-  display: none;
   margin-bottom: 60px;
+  &__wrap {
+    overflow-x: auto;
+  }
 }
 .agents__thead {
   .agents__th {
@@ -73,7 +75,7 @@
     }
 
     &:nth-child(2) {
-      width: 220px;
+      width: 260px;
     }
     &:nth-child(3) {
       padding-left: 0;

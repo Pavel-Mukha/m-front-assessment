@@ -1,0 +1,17 @@
+@media screen and (max-width: 1200px) {
+  .agents__tfoot .agents__th:first-child {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 992px) {
+  #body .agents__tfoot {
+    .agents__th {
+      width: auto;
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  .agents__td, .agents__th {
+    padding: 10px 10px 10px 10px;
+  }
+}

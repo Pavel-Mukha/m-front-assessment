@@ -13,9 +13,10 @@
       top: 100%;
       flex-direction: column;
       align-items: flex-start;
+      height: auto;
+      padding: 15px 0;
       transition: right 0.3s ease;
       box-shadow: 3px 3px 10px 0 rgba(0,0,0, 0.3);
-      height: auto;
       background: #fff;
 
       &.active {
@@ -27,17 +28,18 @@
       position: relative;
       flex-direction: column;
       align-items: flex-start;
-      min-width: 200px;
+      min-width: 250px;
       margin-right: 0;
     }
     &__item-link {
-      padding: 10px 15px;
+      padding: 10px 25px;
     }
     &__sub-menu {
       position: static;
       box-shadow: none;
       max-height: 0;
       height: auto;
+      margin-left: 15px;
       transition: all 0.5s ease;
       overflow: hidden;
       visibility: visible;
