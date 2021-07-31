@@ -1,7 +1,9 @@
 .main-navigation {
   display: flex;
   align-items: center;
-
+  &__controls {
+    display: none;
+  }
   &__list {
     display: flex;
     align-items: center;
@@ -32,24 +34,28 @@
     position: relative;
     margin-right: 60px;
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: calc(50% - 7px);
-      right: -18px;
-      width: 7px;
-      height: 7px;
-      background: transparent;
-      border-bottom: 2px solid $brand-color;
-      border-right: 2px solid $brand-color;
-      transform: rotate(45deg);
-      transition: border-color 0.3s ease, transform 0.3s ease, top 0.3s ease;
-      cursor: pointer;
+    & .sub-menu-indicator {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: calc(50% - 7px);
+        right: -18px;
+        width: 7px;
+        height: 7px;
+        background: transparent;
+        border-bottom: 2px solid $brand-color;
+        border-right: 2px solid $brand-color;
+        transform: rotate(45deg);
+        transition: border-color 0.3s ease, transform 0.3s ease, top 0.3s ease;
+        cursor: pointer;
+      }
     }
 
     &:hover {
 
-      &::after {
+      & .sub-menu-indicator::after {
         border-color: $main-link-color;
         top: calc(50% - 3px);
         transform: rotate(-136deg);
