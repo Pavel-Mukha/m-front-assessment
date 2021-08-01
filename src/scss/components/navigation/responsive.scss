@@ -1,0 +1,132 @@
+@media screen and (max-width: 1200px) {
+  .main-navigation__list {
+      margin-right: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .main-navigation {
+    position: relative;
+    z-index: 100;
+    &__list {
+      position: absolute;
+      right: -400px;
+      top: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+      padding: 15px 0;
+      transition: right 0.3s ease;
+      box-shadow: 3px 3px 10px 0 rgba(0,0,0, 0.3);
+      background: #fff;
+
+      &.active {
+        right: 0;
+      }
+
+    }
+    &__item {
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 250px;
+      margin-right: 0;
+    }
+    &__item-link {
+      padding: 10px 25px;
+    }
+    &__sub-menu {
+      position: static;
+      box-shadow: none;
+      max-height: 0;
+      height: auto;
+      margin-left: 15px;
+      transition: all 0.5s ease;
+      overflow: hidden;
+      visibility: visible;
+      opacity: 1;
+
+      & .main-navigation__item {
+        padding: 0;
+      }
+    }
+    .sub-menu-indicator {
+      position: absolute;
+      right: 15px;
+      top: 5px;
+      padding: 10px;
+      z-index: 110;
+
+      &::after {
+        right: calc(50% - 5px);
+        top: calc(50% - 7px);
+      }
+    }
+    &__item_has-children {
+      &:hover {
+        & .sub-menu-indicator::after {
+          border-color: $brand-color;
+          top: calc(50% - 7px);
+          transform: rotate(45deg);
+        }
+      }
+
+      &.active {
+        & .sub-menu-indicator {
+          &::after {
+            border-color: $main-link-color;
+            top: calc(50% - 3px);
+            transform: rotate(-136deg);
+          }
+        }
+        .main-navigation__sub-menu {
+          max-height: 500px;
+          transition: max-height 1s ease;
+        }
+      }
+    }
+    &__controls {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 28px;
+    }
+    &__burger {
+      width: 30px;
+      height: 4px;
+      background: $brand-color;
+      transition: background-color 0.2s ease;
+
+      &::after, &::before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        background: $brand-color;
+      }
+      &::after {
+        top: 0;
+        transition: all 0.3s ease;
+      }
+      &::before {
+        bottom: 0;
+        transition: all 0.3s ease;
+      }
+    }
+    &__controls.active {
+      .main-navigation__burger {
+        background: transparent;
+
+        &::after {
+          top: calc(50% - 2px);
+          transform: rotate(45deg);
+        }
+        &::before {
+          bottom: calc(50% - 2px);
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+  }
+}

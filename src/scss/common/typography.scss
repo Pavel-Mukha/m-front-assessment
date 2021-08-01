@@ -1,0 +1,23 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: $brand-color;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $main-link-color;
+  }
+}
+
+.title {
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  color: $brand-color;
+}

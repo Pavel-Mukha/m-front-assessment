@@ -1,0 +1,32 @@
+.main-header {
+
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    min-height: 80px;
+  }
+
+  &__branding {
+    display: flex;
+
+    &-link {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    margin-right: 15px;
+  }
+
+  &__logo-name {
+    max-width: 150px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $brand-color;
+  }
+}

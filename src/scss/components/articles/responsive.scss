@@ -1,0 +1,23 @@
+@media screen and (max-width: 768px) {
+    .articles {
+      .article {
+        flex-direction: column;
+
+        &:nth-child(even) {
+          flex-direction: column;
+
+          & .article__thumbnail {
+            margin-left: 0;
+          }
+        }
+
+        &__thumbnail {
+          display: flex;
+          flex: 0 0 100%;
+          justify-content: center;
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+      }
+    }
+}
